@@ -5,6 +5,7 @@ import 'package:table_calendar/table_calendar.dart';
 
 import 'components/border_input_widget.dart';
 import 'components/illustration_widget.dart';
+import 'components/main_button_widget.dart';
 import 'iniciando_calendario.dart';
 
 void main() {
@@ -42,16 +43,26 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 30),
+          SizedBox(height: 60),
           // Esse é o código para exibir as imagens do site  https://undraw.co/illustrations
           // Você escolhe a image que quiser lá e apenas substitui o "a_better_world"
           // Repare que o IllustrarionWidget está dentro de um SizedBox
           // A unica função deste SizedBox é definir o tamanho da imagem no App
           SizedBox(
-            height: 300,
+            height: 200,
             child: IllustrarionWidget(
               color: Colors.purple,
               illustration: UnDrawIllustration.family,
+            ),
+          ),
+          SizedBox(height: 30),
+          SizedBox(
+            height: 60,
+            child: MainButtonWidget(
+              onTap: () {},
+              text: 'Exemplo Botao 😵‍💫',
+              bgColor: Colors.purple,
+              txtColor: Colors.white,
             ),
           ),
           SizedBox(height: 30),
